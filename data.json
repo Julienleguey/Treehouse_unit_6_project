@@ -1,0 +1,52 @@
+{
+    "data": {
+        "title": "Projects",
+        "projects": [
+            {
+                "id": 0,
+                "project_name": "project 1",
+                "description": "blabla1",
+                "technologies": ["tech1", "tech2"],
+                "live_link": "link1",
+                "github_link": "https://github.com/Julienleguey/Treehouse_unit_1_project",
+                "image_urls": ["../images/project1_1.png", "../images/project1_2.png", "../images/project1_3.png"]
+            },
+            {
+                "id": 1,
+                "project_name": "project 2",
+                "description": "blabla2",
+                "technologies": ["tech1", "tech2"],
+                "live_link": "link2",
+                "github_link": "https://github.com/Julienleguey/Treehouse_unit_2_project",
+                "image_urls": ["../images/project2_1.png", "../images/project2_2.png"]
+            },
+            {
+                "id": 2,
+                "project_name": "project 3",
+                "description": "blabla3",
+                "technologies": ["tech1", "tech2"],
+                "live_link": "link3",
+                "github_link": "https://github.com/Julienleguey/Treehouse_unit_3_project",
+                "image_urls": ["../images/project3_1.png", "../images/project3_2.png", "../images/project3_3.png"]
+            },
+            {
+                "id": 3,
+                "project_name": "project 4",
+                "description": "blabla4",
+                "technologies": ["tech1", "tech2"],
+                "live_link": "link4",
+                "github_link": "https://github.com/Julienleguey/Treehouse_unit_4_project",
+                "image_urls": ["../images/project4_1.png", "../images/project4_2.png", "../images/project4_3.png", "../images/project4_4.png"]
+            },
+            {
+                "id": 4,
+                "project_name": "project 5",
+                "description": "blabla5",
+                "technologies": ["tech1", "tech2"],
+                "live_link": "link5",
+                "github_link": "https://github.com/Julienleguey/Treehouse_unit_5_project",
+                "image_urls": ["../images/project5_1.png", "../images/project5_2.png", "../images/project5_3.png"]
+            }
+        ]
+    }
+}
