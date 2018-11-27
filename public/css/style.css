@@ -148,3 +148,43 @@ a:hover{
 .portfolio-bio{
     line-height: 25px;
 }
+
+/***********************
+PERSONNAL CUSTOMIZATION
+***********************/
+.portfolio-me{
+  background-color: #42a0ff;
+}
+
+.portfolio-me p{
+  color: white;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  padding-top: 10px;
+  border-top: 1px solid;
+}
+
+.portfolio-me a{
+  color: white;
+}
+
+.project-images{
+  box-shadow: 3px 3px 10px grey;
+}
+
+.project-images:hover{
+  transform: scale(1.08);
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.portfolio-intro p{
+  padding-bottom: 1rem;
+}
+
+.portfolio-intro h3{
+  padding-bottom: 1rem;
+}
+
+
+/* In index.pug, I changed small-up-2 for small-up-1 in order to optimize the grid display on a small screen

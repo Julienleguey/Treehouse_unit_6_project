@@ -4,46 +4,46 @@
         "projects": [
             {
                 "id": 0,
-                "project_name": "project 1",
-                "description": "blabla1",
-                "technologies": ["tech1", "tech2"],
-                "live_link": "link1",
+                "project_name": "Random Quote Generator",
+                "description": "A program that displays a randomly selected quote each time the user clicks a button or every 20 seconds.",
+                "technologies": ["JavaScript", "HTML", "CSS"],
+                "live_link": "https://julienleguey.github.io/project%201/index.html",
                 "github_link": "https://github.com/Julienleguey/Treehouse_unit_1_project",
                 "image_urls": ["../images/project1_1.png", "../images/project1_2.png", "../images/project1_3.png"]
             },
             {
                 "id": 1,
-                "project_name": "project 2",
-                "description": "blabla2",
-                "technologies": ["tech1", "tech2"],
-                "live_link": "link2",
+                "project_name": "List Pagination and Filtering",
+                "description": "Enhancing the usability of a web page that contains a long list by employing JavaScript to dynamically divide the list into pages. A search feature helps to display only the students that match the search criteria.",
+                "technologies": ["JavaScript", "HTML", "CSS"],
+                "live_link": "https://julienleguey.github.io/project%202/index.html",
                 "github_link": "https://github.com/Julienleguey/Treehouse_unit_2_project",
                 "image_urls": ["../images/project2_1.png", "../images/project2_2.png"]
             },
             {
                 "id": 2,
-                "project_name": "project 3",
-                "description": "blabla3",
-                "technologies": ["tech1", "tech2"],
-                "live_link": "link3",
+                "project_name": "Interactive Form",
+                "description": "An interactive registration form for a fictional conference. The user has to add basic personnal infos (name, mail address, job role), chose a t-shirt among several (size, design, color), register for at least one activity, and add his payment info. The app check if each field of the form is correctly filled and display messages to help the user to fill them.",
+                "technologies": ["JavaScript", "jQuery", "HTML", "CSS"],
+                "live_link": "https://julienleguey.github.io/project%203/index.html",
                 "github_link": "https://github.com/Julienleguey/Treehouse_unit_3_project",
                 "image_urls": ["../images/project3_1.png", "../images/project3_2.png", "../images/project3_3.png"]
             },
             {
                 "id": 3,
-                "project_name": "project 4",
-                "description": "blabla4",
-                "technologies": ["tech1", "tech2"],
-                "live_link": "link4",
+                "project_name": "Word guessing game: Phrase Hunter",
+                "description": "A game made using Object Oriented Programming. The player’s goal is to guess all the letters in a hidden, random phrase. At the beginning, the player only sees the number of letters and words in the phrase, represented by blank boxes on the screen. The player clicks an onscreen keyboard to guess letters in the phrase. He can also use his computer's keyboard. The player keeps choosing letters until they reveal all the letters in the phrase, or they make 5 incorrect guesses.",
+                "technologies": ["JavaScript", "jQuery", "HTML", "CSS"],
+                "live_link": "https://julienleguey.github.io/project%204/index.html",
                 "github_link": "https://github.com/Julienleguey/Treehouse_unit_4_project",
                 "image_urls": ["../images/project4_1.png", "../images/project4_2.png", "../images/project4_3.png", "../images/project4_4.png"]
             },
             {
                 "id": 4,
-                "project_name": "project 5",
-                "description": "blabla5",
-                "technologies": ["tech1", "tech2"],
-                "live_link": "link5",
+                "project_name": "Public API Requests",
+                "description": "An employee directory made by communicating with a third-party API. Asynchronously handling the data that are returned from the requests and displayed in the app.",
+                "technologies": ["JavaScript", "jQuery", "AJAX", "HTML", "CSS"],
+                "live_link": "https://julienleguey.github.io/project%205/index.html",
                 "github_link": "https://github.com/Julienleguey/Treehouse_unit_5_project",
                 "image_urls": ["../images/project5_1.png", "../images/project5_2.png", "../images/project5_3.png"]
             }

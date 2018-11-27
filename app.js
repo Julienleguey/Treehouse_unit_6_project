@@ -9,8 +9,6 @@ app.use('/images', express.static('images'));
 app.set('view engine', 'pug');
 
 
-
-
 app.get('/', (req, res) => {
 
   const projs = [];
@@ -31,40 +29,48 @@ app.get('/about', (req, res) => {
 
 
 app.get('/project', (req, res) => {
-  res.redirect('/project/1');
+  res.redirect('/project/0');
 });
 
 
-app.get('/project/:id', (req, res) => {
+app.get('/project/:id', (req, res, next) => {
 
   const id = req.params.id;
 
-  console.log(id);
+  //if id not >=0 or <= projects.length then
 
-  const projId = projects[id].id;
-  const projName = projects[id].project_name;
-  const projDescr = projects[id].description;
-  const projTech = projects[id].technologies;
-  const projLiveLink = projects[id].live_link;
-  const projGithub = projects[id].github_link;
-  const projImages = projects[id].image_urls;
+  if (id >= 0 && id <= projects.length) {
+    const projId = projects[id].id;
+    const projName = projects[id].project_name;
+    const projDescr = projects[id].description;
+    const projTech = projects[id].technologies;
+    const projLiveLink = projects[id].live_link;
+    const projGithub = projects[id].github_link;
+    const projImages = projects[id].image_urls;
 
+    const templateData = { projId, projName, projDescr, projTech, projLiveLink, projGithub, projImages };
 
-
-  console.log(projId);
-
-  const templateData = { projId, projName, projDescr, projTech, projLiveLink, projGithub, projImages };
-
-
-
-  res.render('project', templateData);
+    res.render('project', templateData);
+  } else {
+    const err = new Error("This project doesn't exist (yet)!");
+    err.status = 404;
+    next(err);
+  }
 });
 
 
+app.use((req, res, next) => {
+  const err = new Error("We couldn't find the page you're looking for!");
+  err.status = 404;
+  next(err);
+});
 
 
-
-
+app.use((err, req, res, next) => {
+  res.locals.error = err;
+  res.status(err.status);
+  res.render('error');
+});
 
 
 app.listen(3000, () => {
