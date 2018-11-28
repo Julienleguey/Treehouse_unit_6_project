@@ -1,14 +1,19 @@
+//requiring dependencies
 const express = require('express');
 const { data } = require('./data.json');
 const { projects } = data;
 
 const app = express();
 
+//serving the static files
 app.use('/static', express.static('public'));
 app.use('/images', express.static('images'));
+
+//setting the view engine to pug
 app.set('view engine', 'pug');
 
 
+//route to index.pug
 app.get('/', (req, res) => {
 
   const projs = [];
@@ -23,22 +28,23 @@ app.get('/', (req, res) => {
 });
 
 
+//route to about.pug
 app.get('/about', (req, res) => {
   res.render('about');
 });
 
 
+//redirecting to the first project in case of the id of the project is missing in the url
 app.get('/project', (req, res) => {
   res.redirect('/project/0');
 });
 
-
+//route to project.pug
 app.get('/project/:id', (req, res, next) => {
 
   const id = req.params.id;
 
-  //if id not >=0 or <= projects.length then
-
+  //if the id in the url is correct (between 0 and the number of projects), rendering the project page, serving the needed data from data.json
   if (id >= 0 && id <= projects.length) {
     const projId = projects[id].id;
     const projName = projects[id].project_name;
@@ -52,6 +58,7 @@ app.get('/project/:id', (req, res, next) => {
 
     res.render('project', templateData);
   } else {
+    //if the id in the url is uncorrect, rendering the error page
     const err = new Error("This project doesn't exist (yet)!");
     err.status = 404;
     next(err);
@@ -59,6 +66,7 @@ app.get('/project/:id', (req, res, next) => {
 });
 
 
+//setting an error in case of an uncorrect url
 app.use((req, res, next) => {
   const err = new Error("We couldn't find the page you're looking for!");
   err.status = 404;
@@ -66,6 +74,7 @@ app.use((req, res, next) => {
 });
 
 
+//rendering an error page in case of an uncorrect url
 app.use((err, req, res, next) => {
   res.locals.error = err;
   res.status(err.status);
@@ -73,6 +82,7 @@ app.use((err, req, res, next) => {
 });
 
 
+//listening to port 3000
 app.listen(3000, () => {
-  console.log('The application is running on localhost:3000');
+  console.log('The app is running!');
 });
